@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medical Clinic</title>
+    <link rel="icon" type="image/png" href="">
+    <link rel="stylesheet" href="assets/main/css/fonts.css">
+    <link rel="stylesheet" href="assets/main/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-D4cPimHCOqIn9tr0mJ4r5f0Rmsa4Q6tUbV2nQdi7Q6v3nDHRJ+4U7rcl/2Fr0cAB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="main-wrapper" class="show">
+
+        <!-- Logo Components -->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="index.html"><img class="logo-tabib" src="assets/images/project_logo.webp" alt=""></a>
+            </div>
+        </div>
+        <!-- End Logo Components -->
+
+        <!-- Sidebar -->
+        <aside class="left-panel nicescroll-box">
+            <nav class="navigation">
+                <ul class="list-unstyled main-menu">
+                    <li class="has-submenu">
+                        <a href="index.html">
+                            <i class="fas fa-th-large"></i>
+                            <span class="nav-label">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void(0)" class="has-arrow mm-collapsed">
+                            <i class="fas fa-users"></i>
+                            <span class="nav-label">Patients</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="new-patient.html">New Patient</a></li>
+                            <li><a href="all-patients.html">All Patients</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="new-appointment.html">
+                            <i class="fas fa-calendar-plus"></i>
+                            <span class="nav-label">Appointment</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void(0)" class="has-arrow mm-collapsed">
+                            <i class="fas fa-book-medical"></i>
+                            <span class="nav-label">Prescriptions</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="new-prescription.html">New Prescription</a></li>
+                            <li><a href="all-prescriptions.html">All Prescriptions</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu active">
+                        <a href="add-drug.html">
+                            <i class="fas fa-pills"></i>
+                            <span class="nav-label">Add Drug</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void(0)" class="has-arrow mm-collapsed">
+                            <i class="fas fa-heartbeat"></i>
+                            <span class="nav-label">Tests</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="add-test.html">Add Test</a></li>
+                            <li><a href="all-tests.html">All Tests</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="calendar.html">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span class="nav-label">Calendar</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void(0)" class="has-arrow mm-collapsed">
+                            <i class="fas fa-file-invoice"></i>
+                            <span class="nav-label">Billing</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="create-invoice.html">Create Invoice</a></li>
+                            <li><a href="billing-list.html">Billing List</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void(0)" class="has-arrow mm-collapsed">
+                            <i class="fas fa-cog"></i>
+                            <span class="nav-label">Settings</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="doctor-settings.html">Doctor Settings</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- End Sidebar -->
+
+        <!-- Header -->
+        <div class="header">
+            <header class="top-head container-fluid">
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="line"></span><span class="line"></span><span class="line"></span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="widget-6">
+                        <div class="cart-wrapper">
+                            <div class="cart-icon">
+                                <a class="cart-control" href="#">
+                                    <i class="fas fa-bell"></i>
+                                    <div class="pulse-css"></div>
+                                </a>
+                            </div>
+                            <div class="cart-dropdown-form dropdown-container">
+                                <div class="form-content">
+                                    <div class="widget-media main-scroll nicescroll-box">
+                                        <ul class="timeine" id="notification-list">
+                                            <li>
+                                                <h6 class="mb-0">Notifications</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-account-wrapper widget-7">
+                        <div class="account-wrapper">
+                            <div class="account-control">
+                                <a class="login header-profile" href="#" title="Sign in">
+                                    <div class="header-info">
+                                        <span>Dr Roberts</span>
+                                        <small>Admin</small>
+                                    </div>
+                                    <img src="https://via.placeholder.com/150/f8f8f8/2b2b2b" alt="people">
+                                </a>
+                                <div class="account-dropdown-form dropdown-container">
+                                    <div class="form-content">
+                                        <a href="doctor-settings.html">
+                                            <i class="far fa-user"></i>
+                                            <span class="ml-2">Profile</span>
+                                        </a>
+                                        <a href="#" class="logout">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            <span class="ml-2">Logout </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- End Header -->
+
+        <!-- Content -->
+        <div class="content-body">
+            <div class="warper container-fluid">
+                <div class="new_appointment main_container">
+                    <div class="row page-titles mx-0">
+                        <div class="col-sm-6 p-md-0">
+                            <div class="welcome-text">
+                                <h4 class="text-primary">Add Drugs</h4>
+                                <p class="mb-0">Add New Drugs</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active"><a href="/add-test.html">Add Drugs</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card shadow">
+                                <div class="card-header fix-card">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h4 class="card-title">All Drugs</h4>
+                                        </div>
+                                        <div class="col-4">
+                                            <button type="button" class="btn btn-primary float-end"
+                                                data-bs-toggle="modal" data-bs-target="#addDrugs">Add Drugs</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="drug-table" class="display nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Trade Name</th>
+                                                    <th>Generic Name</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>#1</td>
+                                                    <td>Airi Satou</td>
+                                                    <td>Alcohol</td>
+                                                    <td class="text-start">
+                                                        <a data-bs-toggle='modal' data-bs-target='#addDrugs'
+                                                            class='mr-4'>
+                                                            <span class='fas fa-pencil-alt tbl-edit'></span>
+                                                        </a>
+                                                        <a class='mr-4 delet'><span
+                                                                class='fas fa-trash-alt tbl-delet'></span></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Content -->
+
+        <!-- Modals -->
+        <div class="modal fade selectRefresh" id="addDrugs" tabindex="-1" role="dialog"
+            aria-labelledby="modal-title-addDrug-modal">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title-addDrug-modal">Add Drug</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row align-items-start" id="addDrugForm">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Trade Name</label>
+                                    <input type="text" class="form-control" placeholder="Trade Name" name="name">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Generic Name</label>
+                                    <input type="text" class="form-control" placeholder="Generic Name" name="genericName">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Note</label>
+                                    <textarea class="form-control" rows="3" name="note"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary save-changes">Save changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade selectRefresh" id="drug-modal-edit" tabindex="-1" role="dialog"
+            aria-labelledby="modal-title-addDrug-modal">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title-edit-modal">Edit Drug</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row align-items-start" id="editDrugForm">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Trade Name</label>
+                                    <input type="text" class="form-control" placeholder="Trade Name" name="name">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Generic Name</label>
+                                    <input type="text" class="form-control" placeholder="Generic Name" name="genericName">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Note</label>
+                                    <textarea class="form-control" rows="3" name="note"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary save-edit save-changes">Save changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modals -->
+
+        <!-- Toaster -->
+        <div id="toastBox"></div>
+        <!-- End Toaster -->
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/plugins/popper/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/moment/moment.min.js"></script>
+    <script src="assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/js/init-tdatatable.js"></script>
+    <script src="assets/js/toggleFullScreen.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/option-themes.js"></script>
+    <script src="assets/js/toaster-custom.js"></script>
+    <script src="assets/js/restrict-routing.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.js"></script>
+    <script src="assets/js/webSocket.js"></script>
+
+</body>
+
+</html>

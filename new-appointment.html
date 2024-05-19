@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medical Clinic</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" href="">
+    <!-- Base Styling  -->
+    <link rel="stylesheet" href="assets/main/css/fonts.css">
+    <link rel="stylesheet" href="assets/main/css/style.css">
+
+    <!-- font awesome icons for toaster -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-D4cPimHCOqIn9tr0mJ4r5f0Rmsa4Q6tUbV2nQdi7Q6v3nDHRJ+4U7rcl/2Fr0cAB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="main-wrapper" class="show">
+
+        <!-- start logo components -->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="index.html"> <img class="logo-tabib" src="assets/images/project_logo.webp" alt=""></a>
+                
+            </div>
+        </div>
+        <!-- End logo components -->
+
+
+        <!-- start section sidebar -->
+        <aside class="left-panel nicescroll-box">
+            <nav class="navigation">
+                <ul class="list-unstyled main-menu">
+
+                    <li class="has-submenu">
+                        <a href="index.html">
+                            <i class="fas fa-th-large"></i>
+                            <span class="nav-label">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void()" class="has-arrow mm-collapsed">
+                            <i class="fas fa-users"></i>
+                            <span class="nav-label">Patients</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="new-patient.html">New Patient</a></li>
+                            <li><a href="all-patients.html">All Patients</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu active">
+                        <a href="new-appointment.html">
+                            <i class="fas fa-calendar-plus"></i>
+                            <span class="nav-label">Appointment</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void()" class="has-arrow mm-collapsed">
+                            <i class="fas fa-book-medical"></i>
+                            <span class="nav-label">Prescriptions</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="new-prescription.html">New Prescription</a></li>
+                            <li><a href="all-prescriptions.html">All Prescriptions</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="add-drug.html">
+                            <i class="fas fa-pills"></i>
+                            <span class="nav-label">Add Drug</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void()" class="has-arrow mm-collapsed">
+                            <i class="fas fa-heartbeat"></i>
+                            <span class="nav-label">Tests</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="add-test.html">Add Test</a></li>
+                            <li><a href="all-tests.html">All Tests</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="calendar.html">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span class="nav-label">calendar</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void()" class="has-arrow mm-collapsed">
+                            <i class="fas fa-file-invoice"></i>
+                            <span class="nav-label">Billing</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="create-invoice.html">Create Invoice</a></li>
+                            <li><a href="billing-list.html">Billing List</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void()" class="has-arrow mm-collapsed">
+                            <i class="fas fa-cog"></i>
+                            <span class="nav-label">Settings</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="doctor-settings.html">Doctor Settings</a></li>
+                            <!-- <li><a href="prescription-settings.html">Prescription Settings</a></li> -->
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+        </aside>
+        <!-- End section sidebar -->
+
+
+        <!-- start section header -->
+        <div class="header">
+            <header class="top-head container-fluid">
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="line"></span><span class="line"></span><span class="line"></span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="widget-6">
+                        <div class="cart-wrapper">
+                            <div class="cart-icon">
+                                <a class="cart-control" href="#">
+                                    <i class="fas fa-bell"></i>
+                                    <div class="pulse-css"></div>
+                                </a>
+                            </div>
+                            <div class="cart-dropdown-form dropdown-container">
+                                <div class="form-content">
+                                    <div class="widget-media main-scroll nicescroll-box">
+                                        <ul class="timeine" id="notification-list">
+                                            <li>
+                                                <h6 class="mb-0">Notitications</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-account-wrapper widget-7">
+                        <div class="account-wrapper">
+                            <div class="account-control">
+                                <a class="login header-profile" href="#" title="Sign in">
+                                    <div class="header-info">
+                                        <span>Dr Roberts</span>
+                                        <small>Admin</small>
+                                    </div>
+                                    <img src="https://via.placeholder.com/150/f8f8f8/2b2b2b" alt="people">
+                                </a>
+                                <div class="account-dropdown-form dropdown-container">
+                                    <div class="form-content">
+                                        <a href="doctor-settings.html">
+                                            <i class="far fa-user"></i>
+                                            <span class="ml-2">Profile</span>
+                                        </a>
+                                        <a href="#" class="logout">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            <span class="ml-2">Logout </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- End section header -->
+
+
+        <!-- start section content -->
+        <div class="content-body">
+            <div class="warper container-fluid">
+                <div class="new_appointment main_container">
+                    <div class="row page-titles mx-0">
+                        <div class="col-sm-6 p-md-0">
+                            <div class="welcome-text">
+                                <h4 class="text-primary">New Appointment</h4>
+                                <p class="mb-0">Add New Appointment</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active"><a href="/new-appointment.html">New Appointment</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div class="row m-rl w-100">
+                                        <div class="col-lg-3 col-sm-12">
+                                            <div class="form-group">
+                                                <input id="daterange"
+                                                    class="form-control input-daterange-datepicker appointment">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12">
+                                            <div class="form-group">
+                                                <button type="button" class="btn btn-primary w-100 h-56"
+                                                    data-bs-toggle="modal" data-bs-target="#newAppointment"
+                                                    id="new-appointmentbutton">New
+                                                    Appointment </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="appointment-table" class="display nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th>Time</th>
+                                                    <th>Date</th>
+                                                    <th>Patient</th>
+                                                    <th>Address</th>
+                                                    <th>Phone</th>
+                                                    <!-- <th>Status</th> -->
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal  -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="modal-title-head-modal"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title-head-modal">Michael R Sheets</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"> <span
+                                aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Motif Patient</h5>
+                        <p>Caregivers can be spouses, family members, friends, or even a close neighbor. As a caregiver,
+                            you are an integral part of the team. Moffitt is based on the core concept of Patient and
+                            Family-Centered Care which in short is a partnership
+                            between you, the patient and the medical treatment team. As part of the team, you will help
+                            coordinate the patient’s care. That said, you must also make sure you are taking care of
+                            yourself.
+                        </p>
+                        <hr>
+                        <form>
+                            <div class="form-group">
+                                <label>Review doctors</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn badge-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="changeTimeAndDate" tabindex="-1" role="dialog"
+            aria-labelledby="modal-title-edit-modal">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title-edit-modal"><img class="rounded-circle" width="35"
+                                src="https://via.placeholder.com/150/f8f8f8/2b2b2b" alt=""> Edit Appointment
+                        </h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row align-items-start" id="editAppointmentForm">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input class="form-control" type="date" placeholder="2022/06/17" name="dateEdit"
+                                        id="appointment-date-input-edit">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <<select class="form-control form-select" name="timeRangeEdit"
+                                    id="appointment-timerange-dropdown">
+                                    <option disabled selected>--Select Appointment Range--</option>
+                                    <option disabled selected>--Doctor not available--</option>
+                                    <!-- <option> 00:30:00 - 01:00:00</option>
+                                    <option> 01:00:00 - 01:30:00</option>
+                                    <option> 01:30:00 - 02:00:00</option>
+                                    <option> 02:00:00 - 02:30:00</option>
+                                    <option> 02:30:00 - 03:00:00</option>
+                                    <option> 03:00:00 - 03:30:00</option>
+                                    <option> 03:30:00 - 04:00:00</option>
+                                    <option> 04:00:00 - 04:30:00</option>
+                                    <option> 04:30:00 - 05:00:00</option>
+                                    <option> 05:00:00 - 05:30:00</option>
+                                    <option> 05:30:00 - 06:00:00</option>
+                                    <option> 06:00:00 - 06:30:00</option>
+                                    <option> 06:30:00 - 07:00:00</option>
+                                    <option> 07:00:00 - 07:30:00</option>
+                                    <option> 07:30:00 - 08:00:00</option>
+                                    <option> 08:00:00 - 08:30:00</option>
+                                    <option> 08:30:00 - 09:00:00</option>
+                                    <option> 09:00:00 - 09:30:00</option>
+                                    <option> 09:30:00 - 10:00:00</option>
+                                    <option> 10:00:00 - 10:30:00</option> -->
+                                </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Details Patient</label>
+                                    <textarea class="form-control" rows="3" name="motifPatient"></textarea>
+                                </div>
+                            </div>
+                            <!-- added for getting patientid -->
+                            <input type="number" name="patientId" style="display: none;" />
+                            <input type="number" name="appointmentId" style="display: none;" />
+                            <!-- added for getting patientid -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn badge-primary">Save changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade selectRefresh" id="newAppointment" tabindex="-1" aria-labelledby="exampleModalLabelOne">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabelOne"> New appointment </h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row align-items-start" id="addAppointmentForm">
+                            <div class="col-md-6 col-sm-12 form-group">
+                                <input class="form-control" id="appointment-add-input" type="date"
+                                    placeholder="06/17/2022" name="date">
+                            </div>
+                            <div class="col-md-6 col-sm-12 form-group">
+                                <select class="form-control form-select" name="timeRange"
+                                    id="appointmentlist-time-slots">
+                                    <option disabled selected index>--Select Appointment Range--</option>
+                                    <option disabled selected>please select date first</option>
+                                    <!-- <option> 07:00:00 - 07:30:00</option> -->
+                                    <!-- <option> 07:30:00 - 08:00:00</option>
+                                    <option> 08:00:00 - 08:30:00</option>
+                                    <option> 08:30:00 - 09:00:00</option>
+                                    <option> 09:00:00 - 09:30:00</option>
+                                    <option> 09:30:00 - 10:00:00</option>
+                                    <option> 10:00:00 - 10:30:00</option> -->
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-sm-12 form-group">
+                                <select class="form-control form-select" id="patient-dropdown" name="patient">
+                                    <option disabled selected>---Select Patient---</option>
+                                    <!-- <option>Airi Satou</option>
+                                    <option>Angelica Ramos</option>
+                                    <option>Ashton Cox</option>
+                                    <option>Bradley Greer</option>
+                                    <option>Brenden</option>
+                                    <option>Ashton Cox</option> -->
+                                </select>
+                            </div>
+                            <br>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Motif Patients</label>
+                                    <textarea class="form-control" rows="3" name="motifPatients"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn badge-primary">Save changes</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn badge-primary">Save changes</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- End Modal  -->
+
+    </div>
+    <!-- start toaster -->
+    <div id="toastBox">
+    </div>
+    <!-- end toaster -->
+
+
+
+    <!-- JQuery v3.5.1 -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- JQuery ajax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- popper js -->
+    <script src="assets/plugins/popper/popper.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Moment -->
+    <script src="assets/plugins/moment/moment.min.js"></script>
+
+    <!-- Date Range Picker -->
+    <script src="assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- Datatable -->
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/js/init-tdatatable.js"></script>
+
+    <!-- Main Custom JQuery -->
+    <script src="assets/js/toggleFullScreen.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/option-themes.js"></script>
+    <script src="assets/js/allPagesJquery/new-appointment.js"></script>
+
+
+
+    <!-- custom toaster -->
+    <script src="assets/js/toaster-custom.js"></script>
+
+
+    <!-- restrict routing -->
+    <script src="assets/js/restrict-routing.js"></script>
+
+
+    <!-- websocket -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.js"></script>
+    <script src="assets/js/webSocket.js"></script>
+
+</body>
+
+</html>

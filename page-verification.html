@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ahmed Med Clinic | Email & Mobile Verification</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" href="">
+    <!-- Base Styling -->
+    <link rel="stylesheet" href="assets/main/css/fonts.css">
+    <link rel="stylesheet" href="assets/main/css/style.css">
+    <!-- Font Awesome Icons for Toaster -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-D4cPimHCOqIn9tr0mJ4r5f0Rmsa4Q6tUbV2nQdi7Q6v3nDHRJ+4U7rcl/2Fr0cAB" crossorigin="anonymous">
+</head>
+
+<body class="auth">
+    <div id="main-wrapper" class="show">
+
+        <!-- Verification -->
+        <div class="login-tabib">
+            <div>
+                <div class="login-main">
+                    <!-- Start Logo Components -->
+                    <div class="m-2 h-25">
+                        <div class="brand-logo">
+                            <a href="index.html">
+                                <img class="logo-tabib" src="assets/images/project_logo.webp" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Logo Components -->
+                    <h4>Email Verification</h4>
+                    <form id="emailVerificationForm">
+                        <div class="form-group">
+                            <p>Please enter your email address below to receive instructions for verification.</p>
+                            <div style="position: relative; display: block;">
+                                <input class="form-control" type="email" id="email" name="email"
+                                    placeholder="Enter your email" />
+                                <div id="emailVerifiedIcon" style="display: none; position: absolute; top: 50%; right: 0; transform: translateY(-50%);">
+                                    <svg width="50px" height="50px" viewBox="0 0 512 512" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <title>success-filled</title>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="add-copy-2" fill="#28a745" transform="translate(42.666667, 42.666667)">
+                                                <path d="M213.333333,3.55271368e-14 C95.51296,3.55271368e-14 3.55271368e-14,95.51296 3.55271368e-14,213.333333 C3.55271368e-14,331.153707 95.51296,426.666667 213.333333,426.666667 C331.153707,426.666667 426.666667,331.153707 426.666667,213.333333 C426.666667,95.51296 331.153707,3.55271368e-14 213.333333,3.55271368e-14 Z M293.669333,137.114453 L323.835947,167.281067 L192,299.66912 L112.916693,220.585813 L143.083307,190.4192 L192,239.335893 L293.669333,137.114453 Z"
+                                                    id="Shape"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="show-hide"><span class="show"></span></div>
+                        </div>
+
+                        <!-- Email OTP Fields -->
+                        <div id="otpEmailFields" style="display: none;">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <input class="form-control" type="text" id="emailOTP1" name="emailOTP1"
+                                            maxlength="1" placeholder="">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control" type="text" id="emailOTP2" name="emailOTP2"
+                                            maxlength="1" placeholder="">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control" type="text" id="emailOTP3" name="emailOTP3"
+                                            maxlength="1" placeholder="">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control" type="text" id="emailOTP4" name="emailOTP4"
+                                            maxlength="1" placeholder="">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control" type="text" id="emailOTP5" name="emailOTP5"
+                                            maxlength="1" placeholder="">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control" type="text" id="emailOTP6" name="emailOTP6"
+                                            maxlength="1" placeholder="">
+                                    </div>
+                                    <div class="show-hide"><span class="show"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Email OTP Fields -->
+
+                        <div class="form-group mb-0">
+                            <div class="mt-3">
+                                <button type="button" id="emailVerificationButton" disabled style="cursor: not-allowed;"
+                                    class="btn btn-primary btn-block w-100" onclick="verifyEmailOTP()">Verify
+                                    Email OTP</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <p class="mt-4 mb-0">Already Verified account?<a class="ms-2 text-primary" href="page-login.html">Sign in</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- End Verification -->
+
+    </div>
+
+    <!-- Start Toaster -->
+    <div id="toastBox"></div>
+    <!-- End Toaster -->
+
+    <!-- JQuery v3.5.1 -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <!-- JQuery Ajax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="assets/plugins/popper/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.js"></script>
+    <!-- Moment -->
+    <script src="assets/plugins/moment/moment.min.js"></script>
+    <!-- Date Range Picker -->
+    <script src="assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+    <!-- Main Custom JQuery -->
+    <script src="assets/js/toggleFullScreen.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/option-themes.js"></script>
+    <script src="assets/js/allPagesJquery/page-verification.js"></script>
+    <!-- Custom Toaster -->
+    <script src="assets/js/toaster-custom.js"></script>
+    <!-- Restrict Routing -->
+    <script src="assets/js/restrict-routing.js"></script>
+
+</body>
+
+</html>

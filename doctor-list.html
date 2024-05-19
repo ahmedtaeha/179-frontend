@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medical Clinic</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" href="">
+    <!-- Base Styling  -->
+    <link rel="stylesheet" href="assets/main/css/fonts.css">
+    <link rel="stylesheet" href="assets/main/css/style.css">
+
+    <!-- font awesome icons for toaster -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-D4cPimHCOqIn9tr0mJ4r5f0Rmsa4Q6tUbV2nQdi7Q6v3nDHRJ+4U7rcl/2Fr0cAB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="main-wrapper" class="show">
+
+
+        <!-- start logo components -->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="index.html"> <img class="logo-tabib" src="assets/images/project_logo.webp" alt=""></a>
+                
+            </div>
+        </div>
+        <!-- End logo components -->
+
+
+        <!-- start section sidebar -->
+        <aside class="left-panel nicescroll-box">
+            <nav class="navigation">
+                <ul class="list-unstyled main-menu">
+
+                    <li class="has-submenu">
+                        <a href="index.html">
+                            <i class="fas fa-th-large"></i>
+                            <span class="nav-label">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void()" class="has-arrow mm-collapsed">
+                            <i class="fas fa-users"></i>
+                            <span class="nav-label">Patients</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="new-patient.html">New Patient</a></li>
+                            <li><a href="all-patients.html">All Patients</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="new-appointment.html">
+                            <i class="fas fa-calendar-plus"></i>
+                            <span class="nav-label">Appointment</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void()" class="has-arrow mm-collapsed">
+                            <i class="fas fa-book-medical"></i>
+                            <span class="nav-label">Prescriptions</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="new-prescription.html">New Prescription</a></li>
+                            <li><a href="all-prescriptions.html">All Prescriptions</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="add-drug.html">
+                            <i class="fas fa-pills"></i>
+                            <span class="nav-label">Add Drug</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void()" class="has-arrow mm-collapsed">
+                            <i class="fas fa-heartbeat"></i>
+                            <span class="nav-label">Tests</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="add-test.html">Add Test</a></li>
+                            <li><a href="all-tests.html">All Tests</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="calendar.html">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span class="nav-label">calendar</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void()" class="has-arrow mm-collapsed">
+                            <i class="fas fa-file-invoice"></i>
+                            <span class="nav-label">Billing</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="create-invoice.html">Create Invoice</a></li>
+                            <li><a href="billing-list.html">Billing List</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void()" class="has-arrow mm-collapsed">
+                            <i class="fas fa-cog"></i>
+                            <span class="nav-label">Settings</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="doctor-settings.html">Doctor Settings</a></li>
+                            <!-- <li><a href="prescription-settings.html">Prescription Settings</a></li> -->
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+           
+        </aside>
+        <!-- End section sidebar -->
+
+
+        <!-- start section header -->
+        <div class="header">
+            <header class="top-head container-fluid">
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="line"></span><span class="line"></span><span class="line"></span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="widget-6">
+                        <div class="cart-wrapper">
+                            <div class="cart-icon">
+                                <a class="cart-control" href="#">
+                                    <i class="fas fa-bell"></i>
+                                    <div class="pulse-css"></div>
+                                </a>
+                            </div>
+                            <div class="cart-dropdown-form dropdown-container">
+                                <div class="form-content">
+                                    <div class="widget-media main-scroll nicescroll-box">
+                                        <ul class="timeine" id="notification-list">
+                                            <li>
+                                                <h6 class="mb-0">Notitications</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-account-wrapper widget-7">
+                        <div class="account-wrapper">
+                            <div class="account-control">
+                                <a class="login header-profile" href="#" title="Sign in">
+                                    <div class="header-info">
+                                        <span>Dr Roberts</span>
+                                        <small>Admin</small>
+                                    </div>
+                                    <img src="https://via.placeholder.com/150/f8f8f8/2b2b2b" alt="people">
+                                </a>
+                                <div class="account-dropdown-form dropdown-container">
+                                    <div class="form-content">
+                                        <a href="doctor-settings.html">
+                                            <i class="far fa-user"></i>
+                                            <span class="ml-2">Profile</span>
+                                        </a>
+                                        <a href="#" class="logout">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            <span class="ml-2">Logout </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- End section header -->
+
+
+        <!-- start section content -->
+        <div class="content-body">
+            <div class="warper container-fluid">
+                <div class="all-patients main_container">
+                    <div class="row page-titles mx-0">
+                        <div class="col-sm-6 p-md-0">
+                            <div class="welcome-text">
+                                <h4 class="text-primary">Doctors List</h4>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active"><a href="/doctor-list.html">Doctors List</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="widget-media list-doctors best-doctor">
+                                <div class="timeline row">
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="timeline-panel card p-4 mb-4">
+                                            <div class="media">
+                                                <img alt="image" src="https://via.placeholder.com/90/f8f8f8/2b2b2b">
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="#">
+                                                    <h4 class="mb-2">Dr. Michael Sullivan</h4>
+                                                </a>
+                                                <p class="mb-2">Endocrinologist</p>
+                                                <div class="star-review">
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                </div>
+                                            </div>
+                                            <div class="btn-group-style-1">
+                                                <div class="btn-content">
+                                                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <div class="form-content">
+                                                            <a href="#">
+                                                                <span class="ml-2">View Profile</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Edit</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Delete </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="timeline-panel card p-4 mb-4">
+                                            <div class="media">
+                                                <img alt="image" src="https://via.placeholder.com/90/f8f8f8/2b2b2b">
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="#">
+                                                    <h4 class="mb-2">Dr. Michael Sullivan</h4>
+                                                </a>
+                                                <p class="mb-2">Endocrinologist</p>
+                                                <div class="star-review">
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                </div>
+                                            </div>
+                                            <div class="btn-group-style-1">
+                                                <div class="btn-content">
+                                                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <div class="form-content">
+                                                            <a href="#">
+                                                                <span class="ml-2">View Profile</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Edit</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Delete </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="timeline-panel card p-4 mb-4">
+                                            <div class="media">
+                                                <img alt="image" src="https://via.placeholder.com/90/f8f8f8/2b2b2b">
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="#">
+                                                    <h4 class="mb-2">Dr. Michael Sullivan</h4>
+                                                </a>
+                                                <p class="mb-2">Endocrinologist</p>
+                                                <div class="star-review">
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                </div>
+                                            </div>
+                                            <div class="btn-group-style-1">
+                                                <div class="btn-content">
+                                                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <div class="form-content">
+                                                            <a href="#">
+                                                                <span class="ml-2">View Profile</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Edit</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Delete </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="timeline-panel card p-4 mb-4">
+                                            <div class="media">
+                                                <img alt="image" src="https://via.placeholder.com/90/f8f8f8/2b2b2b">
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="#">
+                                                    <h4 class="mb-2">Dr. Michael Sullivan</h4>
+                                                </a>
+                                                <p class="mb-2">Endocrinologist</p>
+                                                <div class="star-review">
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                </div>
+                                            </div>
+                                            <div class="btn-group-style-1">
+                                                <div class="btn-content">
+                                                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <div class="form-content">
+                                                            <a href="#">
+                                                                <span class="ml-2">View Profile</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Edit</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Delete </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="timeline-panel card p-4 mb-4">
+                                            <div class="media">
+                                                <img alt="image" src="https://via.placeholder.com/90/f8f8f8/2b2b2b">
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="#">
+                                                    <h4 class="mb-2">Dr. Michael Sullivan</h4>
+                                                </a>
+                                                <p class="mb-2">Endocrinologist</p>
+                                                <div class="star-review">
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                </div>
+                                            </div>
+                                            <div class="btn-group-style-1">
+                                                <div class="btn-content">
+                                                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <div class="form-content">
+                                                            <a href="#">
+                                                                <span class="ml-2">View Profile</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Edit</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Delete </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="timeline-panel card  p-4 mb-4">
+                                            <div class="media">
+                                                <img alt="image" src="https://via.placeholder.com/90/f8f8f8/2b2b2b">
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="#">
+                                                    <h4 class="mb-2">Dr. Michael Sullivan</h4>
+                                                </a>
+                                                <p class="mb-2">Endocrinologist</p>
+                                                <div class="star-review">
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                </div>
+                                            </div>
+                                            <div class="btn-group-style-1">
+                                                <div class="btn-content">
+                                                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <div class="form-content">
+                                                            <a href="#">
+                                                                <span class="ml-2">View Profile</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Edit</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Delete </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="timeline-panel card p-4 mb-4">
+                                            <div class="media">
+                                                <img alt="image" src="https://via.placeholder.com/90/f8f8f8/2b2b2b">
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="#">
+                                                    <h4 class="mb-2">Dr. Michael Sullivan</h4>
+                                                </a>
+                                                <p class="mb-2">Endocrinologist</p>
+                                                <div class="star-review">
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                </div>
+                                            </div>
+                                            <div class="btn-group-style-1">
+                                                <div class="btn-content">
+                                                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <div class="form-content">
+                                                            <a href="#">
+                                                                <span class="ml-2">View Profile</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Edit</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Delete </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="timeline-panel card p-4 mb-4">
+                                            <div class="media">
+                                                <img alt="image" src="https://via.placeholder.com/90/f8f8f8/2b2b2b">
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="#">
+                                                    <h4 class="mb-2">Dr. Michael Sullivan</h4>
+                                                </a>
+                                                <p class="mb-2">Endocrinologist</p>
+                                                <div class="star-review">
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                </div>
+                                            </div>
+                                            <div class="btn-group-style-1">
+                                                <div class="btn-content">
+                                                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <div class="form-content">
+                                                            <a href="#">
+                                                                <span class="ml-2">View Profile</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Edit</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Delete </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="timeline-panel card p-4 mb-4">
+                                            <div class="media">
+                                                <img alt="image" src="https://via.placeholder.com/90/f8f8f8/2b2b2b">
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="#">
+                                                    <h4 class="mb-2">Dr. Michael Sullivan</h4>
+                                                </a>
+                                                <p class="mb-2">Endocrinologist</p>
+                                                <div class="star-review">
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-orange"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                    <i class="fa fa-star text-gray"></i>
+                                                </div>
+                                            </div>
+                                            <div class="btn-group-style-1">
+                                                <div class="btn-content">
+                                                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <div class="form-content">
+                                                            <a href="#">
+                                                                <span class="ml-2">View Profile</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Edit</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <span class="ml-2">Delete </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- start toaster -->
+    <div id="toastBox">
+    </div>
+    <!-- end toaster -->
+
+    <!-- JQuery v3.5.1 -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- popper js -->
+    <script src="assets/plugins/popper/popper.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Moment -->
+    <script src="assets/plugins/moment/moment.min.js"></script>
+
+    <!-- Date Range Picker -->
+    <script src="assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- Datatable -->
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/js/init-tdatatable.js"></script>
+
+    <!-- Main Custom JQuery -->
+    <script src="assets/js/toggleFullScreen.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/option-themes.js"></script>
+
+
+
+    <!-- custom toaster -->
+    <script src="assets/js/toaster-custom.js"></script>
+
+
+    <!-- restrict routing -->
+    <script src="assets/js/restrict-routing.js"></script>
+
+
+    <!-- websocket -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.js"></script>
+    <script src="assets/js/webSocket.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medical Clinic</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" href="">
+    <!-- Base Styling -->
+    <link rel="stylesheet" href="assets/main/css/fonts.css">
+    <link rel="stylesheet" href="assets/main/css/style.css">
+    <!-- Font Awesome Icons for Toaster -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-D4cPimHCOqIn9tr0mJ4r5f0Rmsa4Q6tUbV2nQdi7Q6v3nDHRJ+4U7rcl/2Fr0cAB" crossorigin="anonymous">
+</head>
+
+<body class="auth">
+    <div id="main-wrapper" class="show">
+
+        <!-- Register Page -->
+        <div class="login-tabib">
+            <div>
+                <div class="text-center">
+                    <a class="logo" href="index.html">
+                        <img class="img-fluid" src="assets/images/logo.png" alt="login page">
+                    </a>
+                </div>
+                <div class="login-main">
+                    <form class="theme-form" id="userRegistrationForm">
+                        <h4>Create your account</h4>
+                        <p>Enter your personal details to create account</p>
+                        <div class="form-input text-center">
+                            <label class="col-form-label pt-0"><span>Profile Image.</span></label>
+                            <div class="preview w-50 mx-auto" style="width: 150px; height: 150px; overflow: hidden;">
+                                <input type="file" name="image" style="display: none; cursor: pointer;" id="file-signup-1"
+                                    accept="image/*" onchange="showPreviewSignUp(event);">
+                                <img id="file-signup-1-preview" class="rounded-circuler"
+                                    src="assets/images/avatar-project_logo.webp"
+                                    style="cursor: pointer; object-fit: cover; object-position: center; width: 150px; height: 150px; border-radius: 50%; max-width: 150px; max-height: 150px;"
+                                    alt="img">
+                            </div>
+                        </div>
+                        <div class="form-group m-b-10">
+                            <label class="col-form-label pt-0">Your Name</label>
+                            <div class="row g-2">
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-group mb-0">
+                                        <input id="firstName" name="firstName" class="form-control" type="text"
+                                            placeholder="First name">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-group mb-0">
+                                        <input id="lastName" name="lastName" class="form-control" type="text"
+                                            placeholder="Last name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group m-b-10">
+                            <label class="col-form-label">Email Address</label>
+                            <input id="email" name="email" class="form-control" type="email" placeholder="Ahmed@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label">Your Role</label>
+                            <select id="userRole" name="userRole" class="form-control form-select">
+                                <option disabled selected>---Select Role---</option>
+                                <option>doctor</option>
+                                <option>physicianAssistant</option>
+                                <option>nurse</option>
+                                <option>nursePractitioner</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label">Gender</label>
+                            <select id="gender" name="gender" class="form-control form-select">
+                                <option disabled selected>---Select Gender---</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label">Language</label>
+                            <select id="language" name="languages" class="form-control form-select">
+                                <option disabled selected>---Select Language---</option>
+                                <option>english</option>
+                                <option>arabic</option>
+                                <option>french</option>
+                                <option>german</option>
+                            </select>
+                        </div>
+                        <div class="form-group m-b-10">
+                            <label class="col-form-label">Mobile No.</label>
+                            <div class="form-input position-relative">
+                                <div class="row g-2">
+                                    <div class="col-md-4">
+                                        <select id="countryCode" name="countryCode" class="form-control form-select">
+                                            <option value="" disabled selected>--country--</option>
+                                            <option value="+1">+1 (USA)</option>
+                                            <option value="+44">+44 (UK)</option>
+                                            <option value="+91">+91 (India)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input id="mobileNo" name="mobileNo" class="form-control mobile-no-input numeric-input"
+                                            type="text" placeholder="Your Phone No.">
+                                    </div>
+                                </div>
+                                <div class="show-hide"><span class="show"></span></div>
+                            </div>
+                        </div>
+                        <div class="form-group m-b-10">
+                            <label class="col-form-label">Address</label>
+                            <div class="form-input position-relative">
+                                <input id="address" name="address" class="form-control" type="text"
+                                    placeholder="Your Address">
+                                <div class="show-hide"><span class="show"></span></div>
+                            </div>
+                        </div>
+                        <div class="form-group m-b-10">
+                            <label class="col-form-label">Bio</label>
+                            <div class="form-input position-relative">
+                                <input id="bio" name="bio" class="form-control" type="text" placeholder="Your Bio">
+                                <div class="show-hide"><span class="show"></span></div>
+                            </div>
+                        </div>
+                        <div class="form-group m-b-10">
+                            <label class="col-form-label">Password</label>
+                            <div class="form-input position-relative">
+                                <input id="password" name="password" class="form-control" type="password"
+                                    placeholder="*********">
+                                <div class="show-hide"><span class="show"></span></div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-0">
+                            <div class="checkbox p-0">
+                                <input id="checkbox1" type="checkbox" name="checkbox">
+                                <label class="text-muted" for="checkbox1">Agree with<a class="ms-2 text-primary"
+                                        href="#">Privacy Policy</a></label>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                        </div>
+                        <p class="mt-4 mb-0">Already have an account?<a class="ms-2 text-primary"
+                                href="page-login.html">Sign in</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End Register Page -->
+
+        <!-- Toaster -->
+        <div id="toastBox"></div>
+        <!-- End Toaster -->
+
+    </div>
+
+    <!-- JQuery -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <!-- JQuery Ajax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="assets/plugins/popper/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.js"></script>
+    <!-- Moment JS -->
+    <script src="assets/plugins/moment/moment.min.js"></script>
+    <!-- Date Range Picker -->
+    <script src="assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+    <!-- Main Custom JQuery -->
+    <script src="assets/js/toggleFullScreen.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/option-themes.js"></script>
+    <!-- External -->
+    <script src="assets/js/allPagesJquery/page-register.js"></script>
+    <!-- Custom Toaster -->
+    <script src="assets/js/toaster-custom.js"></script>
+    <!-- Restrict Routing -->
+    <script src="assets/js/restrict-routing.js"></script>
+
+</body>
+
+</html>
